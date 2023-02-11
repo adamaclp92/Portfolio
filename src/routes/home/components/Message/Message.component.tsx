@@ -13,7 +13,7 @@ const USER_ID = "adamaclp92";
 const Contact = (language:LanguageModel) => {
     const handleSubmit = (e:any) => {
         e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target)
           .then((result) => {
             console.log(result.text);
             Swal.fire({
