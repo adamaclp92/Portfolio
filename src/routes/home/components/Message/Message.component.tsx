@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import LanguageModel from '../../models/languageModel'
 import { Form, Input, TextArea, Button, Container } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
@@ -10,9 +10,14 @@ const SERVICE_ID = "service_iatmhno";
 const TEMPLATE_ID = "template_mtvuynw";
 const USER_ID = "2sxORzJd0j_NUqowP";
 
-const form = useRef()
+
 
 const Contact = (language:LanguageModel) => {
+
+  const form = useRef()
+
+
+  console.log(form.current)
     const handleSubmit = (e:any) => {
         e.preventDefault();
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current!, USER_ID)
