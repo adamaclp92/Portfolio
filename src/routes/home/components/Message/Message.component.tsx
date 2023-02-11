@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import LanguageModel from '../../models/languageModel'
 import { Form, Input, TextArea, Button, Container } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
@@ -11,16 +11,10 @@ const TEMPLATE_ID = "template_mtvuynw";
 const USER_ID = "2sxORzJd0j_NUqowP";
 
 
-
 const Contact = (language:LanguageModel) => {
-
-  const form = useRef()
-
-
-  console.log(form.current)
     const handleSubmit = (e:any) => {
         e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current!, USER_ID)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
           .then((result) => {
             console.log(result.text);
             Swal.fire({
@@ -43,7 +37,7 @@ const Contact = (language:LanguageModel) => {
         <h1 className='copntact_title'>{language.code=='en' ? <p>Message</p> : <p>Üzenet</p>}</h1>
         <hr/>
         <div className='contact_form'>
-        <Form ref={form} onSubmit={handleSubmit}>
+        <Form  onSubmit={handleSubmit}>
             <Form.Field
                 id='form.input-control-email'
                 control={Input}
