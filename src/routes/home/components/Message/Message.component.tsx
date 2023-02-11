@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { FormEvent, useRef, useState } from 'react'
 import LanguageModel from '../../models/languageModel'
 import { Form, Input, TextArea, Button, Container } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
@@ -12,24 +12,38 @@ const USER_ID = "2sxORzJd0j_NUqowP";
 
 
 const Contact = (language:LanguageModel) => {
-    const handleSubmit = (e:any) => {
+
+  interface Inputs {
+    email: HTMLFormElement,
+    name: HTMLFormElement,
+    message: HTMLFormElement
+  }
+
+
+
+  
+
+
+    const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+
+        if(e.currentTarget === null) return 
+
+        console.log(e.currentTarget)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, USER_ID)
           .then((result) => {
-            console.log(result.text);
             Swal.fire({
               icon: 'success',
               title: `${language.code === 'en' ? 'Message Sent Successfully' : 'Üzenet sikeresen elküldve'}` 
             })
           }, (error) => {
-            console.log(error.text);
             Swal.fire({
               icon: 'error',
               title: `${language.code === 'en' ? 'Ooops Something Went Wrong!' : 'Ajjaj, valami nem sikerült!'}` ,
               text: error.text,
             })
           });
-        e.target.reset()
+        e.currentTarget.reset()
     }
     
   return (
@@ -48,6 +62,7 @@ const Contact = (language:LanguageModel) => {
                 icon='mail'
                 iconPosition='left'
                 className='email'
+
                 />
             <Form.Field
                 id='form-input-control-last-name'
@@ -58,6 +73,7 @@ const Contact = (language:LanguageModel) => {
                 required
                 icon='user'
                 iconPosition='left'
+
                 />
             <Form.Field
                 id='form-textarea-control-opinion'
@@ -66,6 +82,7 @@ const Contact = (language:LanguageModel) => {
                 name='user_message'
                 placeholder={language.code=='en' ? 'Message...' : 'Üzenet szövege...'}
                 required
+
                 />
             <Button type='submit' color='green'>{language.code=='en' ? 'Send Message' : 'Üzenet küldése'}</Button>
         </Form>
