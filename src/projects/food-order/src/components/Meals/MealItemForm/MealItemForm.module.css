@@ -1,0 +1,27 @@
+.form{
+text-align: right;
+padding: 10px !important;
+background-color: black;
+    
+}
+
+.input{
+    margin: 10px;
+    background-color: green;
+}
+
+.submitButton{
+    width: 8rem;
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #92320c;
+   
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.submitButton:hover,
+.submitButton:active{
+    background-color: #2c0d00;
+}

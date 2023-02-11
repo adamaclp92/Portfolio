@@ -1,0 +1,44 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #333;
+
+    li{
+    
+     float: right;
+
+        a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+    }
+
+    .nav_title{
+      float: left;
+      color: white;
+      margin-left: 10rem;
+      
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    ul {
+    li {
+   
+        float: none;
+        width: 100%;
+    }
+
+    .nav_title{
+     margin-left: 0rem;
+     margin-bottom: 1rem; 
+      
+    }
+  }
+}
