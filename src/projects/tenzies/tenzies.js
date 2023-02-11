@@ -81,7 +81,7 @@ export default function App(){
     }, [tryingCount])
 
     function losingTheGame(){
-        alert("Vesztettél")
+        alert("You losed!")
         window.location.reload(false);
     }
 
@@ -145,11 +145,10 @@ export default function App(){
             <main className='tenzies_main'>
             {tenzies && <Confetti/>}
                 <h1 className="tenzies_title">Tenzies</h1>
-                <p className='tenzies_instructions'>A játék célja, hogy minden kocka ugyanazt a számot tartalmazza. 
-                A kockákra kattintva megtarthatod az értéket.</p>
-                <p className='tenzies_trying'>Hátralevő idő: <span className='countDown'>{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</span></p>
+                <p className='tenzies_instructions'>The goal of the game: all the dice should contain the same number. You can keep the value by clicking on the dice.</p>
+                <p className='tenzies_trying'>Remaining time: <span className='countDown'>{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</span></p>
                 
-                <p className='tenzies_trying'>Eddigi próbálkozások száma: <span className='tenzies_trying-count'>{tryingCount}/20</span></p>
+                <p className='tenzies_trying'>Attempts count: <span className='tenzies_trying-count'>{tryingCount}/20</span></p>
                 <div className='tenzies_contain'>
                     <div className='tenzies_row'>
                         {diceElements}
@@ -158,7 +157,7 @@ export default function App(){
                         <button 
                         className='ui button green tenzies_roll-button'
                         onClick={toggleNewGameButton}>
-                        Új játék
+                        New Game
                         </button>
                         :
                     <button 
