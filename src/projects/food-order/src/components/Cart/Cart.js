@@ -41,8 +41,8 @@ const Cart = (props) => {
               </div>
             </div>
             <div className={styles.actions}>
-              <button onClick={() => removeItem(item.id)}>−</button>
               <button onClick={() => addItem(item)}>+</button>
+              <button onClick={() => removeItem(item.id)}>−</button>
             </div>
           </li>
         </div>
@@ -52,14 +52,14 @@ const Cart = (props) => {
 
   const modalActions = (
     <div className={styles["actions"]}>
-      <button className={styles["button--alt"]} onClick={props.hideCart}>
-        Close
-      </button>
-      {haveAnItem && (
+       {haveAnItem && (
         <button className={`${styles["button"]}`} onClick={setToCheck}>
           Order
         </button>
       )}
+      <button className={styles["button--alt"]} onClick={props.hideCart}>
+        Close
+      </button>
     </div>
   );
 
@@ -78,7 +78,7 @@ const Cart = (props) => {
   };
 
   let modalContent = (
-    <React.Fragment>
+    <div className={styles["food_order_cartcontainer"]}>
       {cartItems}
 
       <div className={styles["total"]}>
@@ -91,11 +91,11 @@ const Cart = (props) => {
       )}
 
       {!isCheckout && modalActions}
-    </React.Fragment>
+    </div>
   );
 
   if (isLoading) {
-    modalContent = <p>Kérem várjon...</p>;
+    modalContent = <p>Please wait..</p>;
   }
 
   if (didSubmitted) {

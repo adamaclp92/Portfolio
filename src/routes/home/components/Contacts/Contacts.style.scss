@@ -4,11 +4,10 @@
     color: white;
     text-decoration: none;
     justify-content: space-between;
-    .first_item{
-        display: block;
-        padding: 14px 16px;
-        float: left;
-    }
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
 
 
     .column{
@@ -26,11 +25,23 @@
         li{
             float: none;
             text-align: center;
+            padding: 5px;
         
         .email{
             padding: 14px 16px;
         }
 
+        }
+
+        .github{
+            margin-top: 15px;
+            color: white;
+        }
+
+        
+        .linkedin{
+            margin-top: 15px;
+            color: white;
         }
         
     }

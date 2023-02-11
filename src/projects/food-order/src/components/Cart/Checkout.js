@@ -83,36 +83,36 @@ const Checkout = (props) => {
     <form onSubmit={confirmHandler}>
       <div className={styles.container}>
         <div className={nameInputClass}>
-          <label htmlFor="name">Név:</label>
+          <label htmlFor="name">Name:</label>
           <input
             className={styles.input}
             type="text"
             id="name"
             ref={nameInputRef}
           ></input>
-          {!formInputsValidity.name && <p>A név nem lehet üres.</p>}
+          {!formInputsValidity.name && <p>Name field cannot be empty.</p>}
         </div>
         <div className={zipInputClass}>
-          <label htmlFor="zipCode">Irányítószám:</label>
+          <label htmlFor="zipCode">Zipcode:</label>
           <input type="text" id="zipCode" ref={zipCodeInputRef}></input>
           {!formInputsValidity.zipCode && (
-            <p>Az irányítószám csak szám lehet.</p>
+            <p>Zipcode field cannot be empty.</p>
           )}
         </div>
         <div className={countryInputClass}>
-          <label htmlFor="country">Város:</label>
+          <label htmlFor="country">Country:</label>
           <input type="text" id="country" ref={countryInputRef}></input>
-          {!formInputsValidity.country && <p>A város nem lehet üres.</p>}
+          {!formInputsValidity.country && <p>Country field cannot be empty..</p>}
         </div>
         <div className={streetInputClass}>
-          <label htmlFor="street">Utca:</label>
+          <label htmlFor="street">Street:</label>
           <input type="text" id="street" ref={streetInputRef}></input>
-          {!formInputsValidity.street && <p>Az utca nem lehet üres.</p>}
+          {!formInputsValidity.street && <p>Street field cannot be empty..</p>}
         </div>
         <div className={numberInputClass}>
-          <label htmlFor="number">Házszám:</label>
+          <label htmlFor="number">Number:</label>
           <input type="text" id="number" ref={numberInputRef}></input>
-          {!formInputsValidity.number && <p>A házszám nem lehet üres.</p>}
+          {!formInputsValidity.number && <p>Number field cannot be empty..</p>}
         </div>
         <div className={styles["actions"]}>
           <button
@@ -120,10 +120,10 @@ const Checkout = (props) => {
             type="button"
             onClick={props.hideCart}
           >
-            Mégse
+            Cancel
           </button>
           <button className={styles["button"]} type="submit">
-            Megerősítés
+            Order
           </button>
         </div>
       </div>
