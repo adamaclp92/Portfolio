@@ -8,6 +8,7 @@
 
 .parent{
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .mealItem{
@@ -30,4 +31,13 @@
 .loading {
     text-align: center;
     color: white;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    .mealItem{
+      width: 40%;
+      margin-top: 5px;
+    }
 }

@@ -28,9 +28,10 @@
   }
 
   @media only screen and (max-width: 750px) {
-    ul {
+    .navbar_container {
+      justify-content: center;
     li {
-   
+        
         float: none;
         width: 100%;
     }

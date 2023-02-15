@@ -28,3 +28,11 @@
 
 }
 
+
+
+@media only screen and (max-width: 550px) {
+
+    .header{
+      padding: 0.5rem 0.5rem;
+    }
+}

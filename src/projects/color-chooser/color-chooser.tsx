@@ -44,7 +44,7 @@ const ColorChooser = () => {
     console.log(color)
 
     return (
-        <div className="container">
+        <div className="color_chooser_">
             <h2>Color Chooser App</h2>
             <p>You can see a color in a square. Your task is to find out what's the color's hexadecimal value from the three possible answers.</p>
             <div className="square" style={{backgroundColor: `${color}`}}></div>
