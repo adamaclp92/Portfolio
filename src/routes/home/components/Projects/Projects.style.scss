@@ -11,55 +11,13 @@
     .navigation-container{
         justify-content: center;
         margin-bottom: 20px;
-        .project{
-            width: 90%;
-            max-width: 800px;
-            height: auto;
-            margin: auto;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            display: flex;
-          
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-            .image{
-                width: 50%;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
-            }
-
-            .project_description{
-                margin: auto;
-
-                .title{
-                    color: rgba(70, 69, 69, 0.493);
-                }
-        
-                .button1{
-                    margin: 5% 0 10% 0%;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                    margin-right: 10px;
-                    max-width: 100%;
-                }
-        
-                .button2{
-                    margin: 5% 0 10% 0%;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                    max-width: 100%;
-                }
-            }
-
-            
-        }
      
     
     }
 }
 
 @media only screen and (max-width: 560px) {
-    .project_description{
-        padding: 10px;
-       
-    }
 
     .projects-container{
         padding: 5px;

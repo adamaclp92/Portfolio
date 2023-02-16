@@ -1,75 +1,48 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Image} from "semantic-ui-react";
+import { Container} from "semantic-ui-react";
 import circleimage from "../../../../assets/circle-drawer.png";
 import colorchooser from "../../../../assets/color-chooser.png";
 import synonymapi from "../../../../assets/synonym-api.png"
 import tenzies from "../../../../assets/tenzies.png"
+import foodorder from "../../../../assets/food-order.png"
 
 import "./Projects.style.scss";
 import LanguageModel from "../../models/languageModel";
+import ProjectDiv from "./UI/ProjectDiv.component";
 
 const Navigation = (language: LanguageModel) => {
+
+  const projectsObjArray = [
+    {id: 0, englishTitle: "CircleDrawer App", hungarianTitle: "Kör rajzolós app", stack: "HTML, SCSS, React, Typescript.", to: "circledrawer", src: circleimage, github: "https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/circle-drawer"},
+    {id: 1, englishTitle: "Color Finder App", hungarianTitle: "Szín kitaláló app", stack: "HTML, SCSS, React, Typescript.", to: "colorchooser", src: colorchooser, github: "https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/color-chooser"},
+    {id: 2, englishTitle: "Synonym API", hungarianTitle: "Szinoníma API", stack: "HTML, SCSS, React, Typescript.", to: "synonymapi", src: synonymapi, github: "https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/synonym-api"},
+    {id: 3, englishTitle: "Tenzies", hungarianTitle: "Tenzies", stack: "HTML, CSS, React.", to: "tenzies", src: tenzies, github: "https://github.com/adamaclp92/ReactLearning/tree/main/my-app11%20-%20Tenzies"},
+    {id: 4, englishTitle: "Food Order App", hungarianTitle: "Étel rendelős app", stack: "HTML, CSS, React.", to: "foodorder", src: foodorder, github: "https://github.com/adamaclp92/ReactLearning/tree/main/my-app17%20-%20FoodOrderApp"}
+  ]
+
+  const projectsList = projectsObjArray.map(project => {
+    return <ProjectDiv 
+    key={project.id}
+    language= {language.code}
+    englishTitle={project.englishTitle}
+    hungarianTitle={project.hungarianTitle}
+    stack= {project.stack}
+    to= {project.to}
+    src= {project.src}
+    github= {project.github}
+  />
+  })
+
+
   return (
     <Container id="projects" className="projects-container">
       {language.code === "en" ? <h1>My Recently Projets</h1> : <h1>Projektjeim</h1>}
-      {language.code === "en" ? <p>The projects are only available in English currently.</p> : <p>A projektek egyelőre csak angol nyelven elérhetőek</p>}
+      {language.code === "en" ? <p>The projects are only available in English for the time being.</p> : <p>A projektek egyelőre csak angol nyelven elérhetőek</p>}
       <hr/>
       <div className="navigation-container">
-        <div className="project">
-            <Image className="image" src={circleimage} />
-            <div className="project_description">
-              {language.code === "en" ? <h5 className="title">CircleDrawer App</h5> : <h5 className="title">Kör rajzolós app</h5>}
-              <p>Stack: HTML, SCSS, React, Typescript.</p> 
-              <Link className="nav-link" to="circledrawer"><button className="button1 ui primary button mini"><i className="angellist icon"></i>Live Demo</button></Link>
-              <a href="https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/circle-drawer" target="_blank"><button className="button2 ui secondary mini button"><i className="github icon"></i>View Source</button></a>
-            </div>
-           
-        </div>
 
-        <div className="project">
-            <Image className="image" src={colorchooser} />
-            <div className="project_description">
-            {language.code === "en" ? <h5 className="title">Color Finder App</h5> : <h5 className="title">Szín kitaláló app</h5>}
-              <p>Stack: HTML, SCSS, React, Typescript.</p> 
-              <Link className="nav-link" to="colorchooser"><button className="button1 ui primary button mini"><i className="angellist icon"></i>Live Demo</button></Link>
-              <a href="https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/color-chooser" target="_blank"><button className="button2 ui secondary mini button"><i className="github icon"></i>View Source</button></a>
-            </div>
-           
-        </div>
+      {projectsList}
 
-        <div className="project">
-            <Image className="image" src={synonymapi} />
-            <div className="project_description">
-            {language.code === "en" ? <h5 className="title">Synonym API</h5> : <h5 className="title">Szinoníma API</h5>}
-              <p>Stack: HTML, SCSS, React, Typescript.</p> 
-              <Link className="nav-link" to="synonymapi"><button className="button1 ui primary button mini"><i className="angellist icon"></i>Live Demo</button></Link>
-              <a href="https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/synonym-api" target="_blank"><button className="button2 ui secondary mini button"><i className="github icon"></i>View Source</button></a>
-            </div>
-           
-        </div>
-
-        <div className="project">
-            <Image className="image" src={tenzies} />
-            <div className="project_description">
-            {language.code === "en" ? <h5 className="title">Tenzies</h5> : <h5 className="title">Tenzies</h5>}
-              <p>Stack: HTML, CSS, React.</p> 
-              <Link className="nav-link" to="tenzies"><button className="button1 ui primary button mini"><i className="angellist icon"></i>Live Demo</button></Link>
-              <a href="https://github.com/adamaclp92/ReactLearning/tree/main/my-app11%20-%20Tenzies" target="_blank"><button className="button2 ui secondary mini button"><i className="github icon"></i>View Source</button></a>
-            </div>
-           
-        </div>
-
-        <div className="project">
-            <Image className="image" src={tenzies} />
-            <div className="project_description">
-            {language.code === "en" ? <h5 className="title">Food order app</h5> : <h5 className="title">Étel rendelős app</h5>}
-              <p>Stack: HTML, CSS, React.</p> 
-              <Link className="nav-link" to="foodorder"><button className="button1 ui primary button mini"><i className="angellist icon"></i>Live Demo</button></Link>
-              <a href="https://github.com/adamaclp92/ReactLearning/tree/main/my-app17%20-%20FoodOrderApp" target="_blank"><button className="button2 ui secondary mini button"><i className="github icon"></i>View Source</button></a>
-            </div>
-           
-        </div>
       </div>
     </Container>
   );
