@@ -9,7 +9,7 @@ const Header = (props) => {
     return(
         <React.Fragment>
             <header className={style.header}>
-                <h2>ReactMeals</h2>
+                <h2>Food Order App</h2>
                 <HeaderCartButton showCart={props.showCart}
                                   hideCart={props.hideCart}
                 />

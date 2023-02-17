@@ -1,32 +1,21 @@
-.projects-container{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 20px;
-    padding: 32px;
-    border: none;
-    background-color: white;
-    hr{
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .navigation-container{
-        justify-content: center;
-        margin-bottom: 20px;
-
-     
-    
-    }
+.projects_container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 20px;
+  padding: 32px;
+  border: none;
+  background-color: white;
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .projects_project_list {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 560px) {
-
-    .projects-container{
-        padding: 5px;
-
-    }
+  .projects_container {
+    padding: 5px;
   }
-
-
-
-
-
-
+}

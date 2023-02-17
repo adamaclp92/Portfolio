@@ -7,7 +7,7 @@ import styles from "./Cart.module.css";
 import Checkout from "./Checkout";
 
 const Cart = (props) => {
-  const { error, isLoading, httpRequest: confirmOrder } = UseHttpRequests();
+  const { isLoading, httpRequest: confirmOrder } = UseHttpRequests();
   const [didSubmitted, setDidSubmitted] = useState(false);
   const cartContext = useContext(CartContext);
   const totalAmount = `$${cartContext.amount.toFixed(2)}`;
@@ -52,7 +52,7 @@ const Cart = (props) => {
 
   const modalActions = (
     <div className={styles["actions"]}>
-       {haveAnItem && (
+      {haveAnItem && (
         <button className={`${styles["button"]}`} onClick={setToCheck}>
           Order
         </button>

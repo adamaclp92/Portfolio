@@ -1,31 +1,48 @@
-import React from 'react'
+import "./Contacts.style.scss";
+import LanguageModel from "../../models/languageModel";
 
-import './Contacts.style.scss'
-import LanguageModel from '../../models/languageModel'
-
-const Contacts  = (language:LanguageModel) => {
+const Contacts = (language: LanguageModel) => {
   return (
-    <ul id="contact" className='footer_container'>
-    <div className='column'>
-      <div className='row'>
-        <li>{language.code === 'en' ? <p>E-mail</p> : <p>E-mail cím</p>}</li>
-        <li><p className='email'>adamaclp92@gmail.com</p></li>
+    <ul id="contact" className="contact_footer_container">
+      <div className="contact_column">
+        <div className="contact_row">
+          <li>{language.code === "en" ? <p>E-mail</p> : <p>E-mail cím</p>}</li>
+          <li>
+            <p className="contact_email">adamaclp92@gmail.com</p>
+          </li>
+        </div>
+        <div className="contact_row">
+          <li>
+            <p>Github</p>
+          </li>
+          <li>
+            <a href="https://github.com/adamaclp92" target="_blank" rel="noopener noreferrer">
+              <i className="github icon"></i>
+            </a>
+          </li>
+        </div>
+        <div className="contact_row">
+          <li>
+            <p>LinkedIn</p>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/%C3%A1d%C3%A1m-rag%C3%B3-b2a2b61a1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="linkedin icon"></i>
+            </a>
+          </li>
+        </div>
       </div>
-      <div className='row'>
-        <li><p>Github</p></li>
-        <li><a href='https://github.com/adamaclp92' target="_blank"><i className="github icon"></i></a></li>
-      </div>
-      <div className='row'>
-        <li><p>LinkedIn</p></li>
-        <li><a href='https://www.linkedin.com/in/%C3%A1d%C3%A1m-rag%C3%B3-b2a2b61a1' target="_blank"><i className="linkedin icon"></i></a></li>
-      </div>
+      <li className="contact_last_item">
+        <p>Copyright @ 2023 Adam Rago. All rights reserved.</p>
+      </li>
 
-    </div>
-    <li className='last_item'><p>Copyright @ 2023 Adam Rago. All rights reserved.</p></li>
-   
-    <li></li>
-  </ul>
-  )
-}
+      <li></li>
+    </ul>
+  );
+};
 
-export default Contacts
+export default Contacts;

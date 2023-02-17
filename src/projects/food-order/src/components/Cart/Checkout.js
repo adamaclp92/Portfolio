@@ -95,14 +95,14 @@ const Checkout = (props) => {
         <div className={zipInputClass}>
           <label htmlFor="zipCode">Zipcode:</label>
           <input type="text" id="zipCode" ref={zipCodeInputRef}></input>
-          {!formInputsValidity.zipCode && (
-            <p>Zipcode field cannot be empty.</p>
-          )}
+          {!formInputsValidity.zipCode && <p>Zipcode field cannot be empty.</p>}
         </div>
         <div className={countryInputClass}>
           <label htmlFor="country">Country:</label>
           <input type="text" id="country" ref={countryInputRef}></input>
-          {!formInputsValidity.country && <p>Country field cannot be empty..</p>}
+          {!formInputsValidity.country && (
+            <p>Country field cannot be empty..</p>
+          )}
         </div>
         <div className={streetInputClass}>
           <label htmlFor="street">Street:</label>

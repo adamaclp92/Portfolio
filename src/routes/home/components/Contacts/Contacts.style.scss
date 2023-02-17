@@ -1,59 +1,50 @@
-.footer_container{
-    padding-top: 20px;
-    height: 200px;
-    color: white;
-    text-decoration: none;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    background-color: #333;
+.contact_footer_container {
+  padding-top: 20px;
+  height: 200px;
+  color: white;
+  text-decoration: none;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
 
+  .contact_column {
+    overflow: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
 
-    .column{
-       overflow: auto;
-       display: flex;
-       margin: auto;
-       justify-content: space-around;
-    }
+  .contact_row {
+    float: left;
+    padding: 10px;
+    margin: 10px;
 
-    .row{
-        float: left;
-        padding: 10px;
-        margin: 10px;
+    li {
+      float: none;
+      text-align: center;
+      padding: 5px;
 
-        li{
-            float: none;
-            text-align: center;
-            padding: 5px;
-        
-        .email{
-            padding: 14px 16px;
-        }
-
-        }
-
-        .github{
-            margin-top: 15px;
-            color: white;
-        }
-
-        
-        .linkedin{
-            margin-top: 15px;
-            color: white;
-        }
-        
-    }
-
-    .last_item{
-    
+      .contact_email {
         padding: 14px 16px;
-        text-align: center;
-        float: none;
+      }
     }
+
+    .github {
+      margin-top: 15px;
+      color: white;
+    }
+
+    .linkedin {
+      margin-top: 15px;
+      color: white;
+    }
+  }
+
+  .contact_last_item {
+    padding: 14px 16px;
+    text-align: center;
+    float: none;
+  }
 }
-
-
-
-

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "semantic-ui-react";
 
-import './synonym-api.style.scss'
+import "./synonym-api.style.scss";
 
 enum OrderToFind {
   syn = "Synonyms - Szinonímák",
@@ -31,15 +31,17 @@ const SynonymApi = () => {
     setInputField(event.currentTarget.value);
   };
 
-  const selectInputChangeHandler = (event: React.FormEvent<HTMLSelectElement>) => {
-
-    const indexOfTarget = Object.values(OrderToFind).indexOf((event.currentTarget.value) as unknown as OrderToFind);
+  const selectInputChangeHandler = (
+    event: React.FormEvent<HTMLSelectElement>
+  ) => {
+    const indexOfTarget = Object.values(OrderToFind).indexOf(
+      event.currentTarget.value as unknown as OrderToFind
+    );
 
     const key = Object.keys(OrderToFind)[indexOfTarget];
-    
-    setSelectInputFieldKey(key)
-    
-  }
+
+    setSelectInputFieldKey(key);
+  };
 
   const getSynonymHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,21 +56,24 @@ const SynonymApi = () => {
   return (
     <Container className="synonym_form">
       <h2>Synonym API</h2>
-      <p>https://api.datamuse.com/ In this link there is an API, which store words and their synonyms, rhymes etc.
-        You can choose a type and then write a word and see the result!
+      <p>
+        https://api.datamuse.com/ In this link there is an API, which store
+        words and their synonyms, rhymes etc. You can choose a type and then
+        write a word and see the result!
       </p>
       <form onSubmit={getSynonymHandler} className="ui form">
         <div className="field synonym_field">
           <label htmlFor="synonym_type">Choose a type:</label>
-          <select id="synonym_type" name="synonym_type" onChange={selectInputChangeHandler}>
-              {Object.values(OrderToFind).map((order: OrderToFind)=> 
-                <option
-                    aria-selected="true"
-                    key={order}
-                    value={order}
-               >{order}
-                </option>
-                )}
+          <select
+            id="synonym_type"
+            name="synonym_type"
+            onChange={selectInputChangeHandler}
+          >
+            {Object.values(OrderToFind).map((order: OrderToFind) => (
+              <option aria-selected="true" key={order} value={order}>
+                {order}
+              </option>
+            ))}
           </select>
         </div>
         <div className="field synonym_field">
@@ -76,7 +81,9 @@ const SynonymApi = () => {
           <input type="text" value={inputField} onChange={inputChangeHandler} />
         </div>
 
-        <button type="submit" className="ui button blue">Submit</button>
+        <button type="submit" className="ui button blue">
+          Submit
+        </button>
       </form>
       <div className="field synonym_field">
         {synonymArray.map((item) => (

@@ -1,18 +1,17 @@
   body{
-    font-family: 'Playfair Display', serif !important;
+    font-family:  sans-serif !important;
     color: rgb(107, 107, 107);
     text-shadow:1px 1px 2px grey;
     text-align: center;
-    background: linear-gradient(90deg, #bdc3c7 0%, #2c3e50 100%) !important;
   }
 
-  .lang{
+  .home_lang{
     position: absolute;
     overflow: hidden;
     margin: 10px;
     cursor: pointer;
     background-color: transparent;
-    .dropdown {
+    .home_dropdown {
         position: relative;
         left: 0;
       display: none;
@@ -23,7 +22,7 @@
 
     &:hover{
       
-      .dropdown{
+      .home_dropdown{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -38,7 +37,7 @@
       }
     } 
 
-    .imageContainer{
+    .home_imageContainer{
       background-color: none;
       width: 30px;
       height:  auto;
@@ -71,7 +70,7 @@
   }
 
   
-.alternativeLanguage{
+.home_alternativeLanguage{
   &:hover{
   animation: bump 300ms ease-out;
 

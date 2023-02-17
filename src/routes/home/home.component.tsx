@@ -1,55 +1,61 @@
-import React, { useState } from "react"
-import en from './assets/en.png'
-import hun from './assets/hun.png'
+import React, { useState } from "react";
+import en from "./assets/en.png";
+import hun from "./assets/hun.png";
 
-import './home.style.scss'
-import Navbar from "./components/Navbar/Navbar.component"
-import LanguageModel from "./models/languageModel"
-import Introduction from "./components/Introduction/Introduction.component"
-import About from "./components/About/About.components"
-import Message from "./components/Message/Message.component"
-import Navigation from "./components/Projects/Projects.component"
-import Contacts from "./components/Contacts/Contacts.components"
+import "./home.style.scss";
+import Navbar from "./components/Navbar/Navbar.component";
+import LanguageModel from "./models/languageModel";
+import Introduction from "./components/Introduction/Introduction.component";
+import About from "./components/About/About.components";
+import Message from "./components/Message/Message.component";
+import Navigation from "./components/Projects/Projects.component";
+import Contacts from "./components/Contacts/Contacts.components";
 
 const languages = [
-    {code: 'en', name: "English", asset: en},
-    {code: 'hun', name: "Hungarian", asset: hun}
-  ]
+  { code: "en", name: "English", asset: en },
+  { code: "hun", name: "Hungarian", asset: hun },
+];
 
-const Home = () =>{
+const Home = () => {
+  const [currentLanguage, setCurrentLanguage] = useState<LanguageModel>(
+    languages[0]
+  );
 
-    const [currentLanguage, setCurrentLanguage] = useState<LanguageModel>(languages[0])
+  const changeLanguage = (selectedLanguage: LanguageModel) => {
+    setCurrentLanguage(selectedLanguage);
+  };
 
-    const changeLanguage = (selectedLanguage: LanguageModel) => {
-      setCurrentLanguage(selectedLanguage)
+  const options = languages.map((language) => {
+    if (language.code !== currentLanguage.code) {
+      return (
+        <li
+          key={language.code}
+          className="home_alternativeLanguage"
+          onClick={() => changeLanguage(language)}
+        >
+          <img src={language.asset} alt="language_asset"/>
+        </li>
+      );
     }
+  });
 
-    const options = languages.map(language => {
-        if(language.code != currentLanguage.code){
-          return <li key={language.code} className="alternativeLanguage" onClick={() => changeLanguage(language)}><img src={language.asset}/></li>
-        }  
-      });
-    
-    return (
-        <React.Fragment>
-              <div className="lang"> 
-                <div className="imageContainer">
-                <img src={currentLanguage.asset}/>
-                </div>
-                <ul className="dropdown">
-                {options}
-                </ul>
-            </div>
-    
-            <Navbar {...currentLanguage}/>
-            <Introduction {...currentLanguage}/>
-            <About {...currentLanguage}/>
-            <Navigation {...currentLanguage}/>         
-            <Message {...currentLanguage}/>
-            <Contacts {...currentLanguage}/>
+  return (
+    <React.Fragment>
+      <div className="home_lang">
+        <div className="home_imageContainer">
+          <img src={currentLanguage.asset} alt="currentLanguage_asset" />
+        </div>
+        <ul className="home_dropdown">{options}</ul>
+      </div>
 
-        </React.Fragment>
-    )
-}
+      <Navbar {...currentLanguage} />
+      <Introduction {...currentLanguage} />
+      <About {...currentLanguage} />
+      <Navigation {...currentLanguage} />
+      <Message {...currentLanguage} />
+      <Contacts {...currentLanguage} />
+    </React.Fragment>
+  );
+};
 
-export default Home
+export default Home;

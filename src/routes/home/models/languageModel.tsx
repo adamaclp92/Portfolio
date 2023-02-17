@@ -1,7 +1,7 @@
 interface LanguageModel {
-    code: string,
-    name: string,
-    asset: string,
+  code: string;
+  name: string;
+  asset: string;
 }
 
-export default LanguageModel
+export default LanguageModel;
