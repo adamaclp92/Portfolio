@@ -2,16 +2,13 @@ import LanguageModel from "../../models/languageModel";
 import "./About.style.scss";
 import skills from "../../config/skills";
 import logos from "../../config/logos";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { Container } from "semantic-ui-react";
 
 const About = (language: LanguageModel) => {
-  const logosMapping = logos.map((logo:any) => {
+  const logosMapping = logos.map((logo: any) => {
     return (
       <div key={logo.text} className="about_column">
         <div className="about_overlay_img">
-        <FontAwesomeIcon icon="check-square" />
+          <img src={logo.logo} />
         </div>
         <div className="about_overlay">
           <div className="about_text">{logo.text}</div>
@@ -25,8 +22,7 @@ const About = (language: LanguageModel) => {
   });
 
   return (
-    <Container id="about" className="about_container">
-
+    <div id="about" className="about_container">
       <h1 className="about_title">
         {language.code === "en" ? <p>About</p> : <p>Rólam</p>}
       </h1>
@@ -35,15 +31,17 @@ const About = (language: LanguageModel) => {
         <p className="about_text">
           I started learning programming at the university in 2018. I have
           learnt many technologies there and beside the university I'm also
-          improving my developing skills continuously. I'm interested in FullStack 
-          developing therefore I'm practising Java and I'm also using SQL. 
+          improving my developing skills continuously. I'm interested in
+          FullStack developing therefore I'm practising Java and I'm also using
+          SQL.
         </p>
       ) : (
         <p className="about_text">
           2018-ban kezdtem el foglalkozni a programozással az egyetemen. Sok
           technológiával megismerkedtem itt és egyetem mellett azóta is
-          folyamatosan fejlesztem magam. A tervem az, hogy lehetőség szerint továbbképezzem magam FullStack irányba.
-          Ennek kapcsán belekóstoltam már a Java-ba, valamint SQL-t folyamatosan használok.
+          folyamatosan fejlesztem magam. A tervem az, hogy lehetőség szerint
+          továbbképezzem magam FullStack irányba. Ennek kapcsán belekóstoltam
+          már a Java-ba, valamint SQL-t folyamatosan használok.
         </p>
       )}
 
@@ -64,7 +62,7 @@ const About = (language: LanguageModel) => {
         )}
         <div className="about_other_overlay">{skillsMapping}</div>
       </div>
-    </Container>
+    </div>
   );
 };
 

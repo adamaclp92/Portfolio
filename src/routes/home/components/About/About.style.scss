@@ -2,16 +2,16 @@
   overflow: hidden;
   box-sizing: border-box;
   padding: 32px;
-  margin: 20px;
   justify-content: center;
   border: none;
-  background-color: rgba(7, 13, 97, 0.3);
-  color: #11aaaa;
+  background-color: white;
+  color: black;
+  height: 100vh;
 
   .about_main {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .about_others {
@@ -35,12 +35,13 @@
 
   .about_dev_skills {
     font-size: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
   }
 
   .about_other_dev_skills {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .about_overlay {
@@ -54,18 +55,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 40px;
   }
 
   .about_dev_logos {
     .about_column {
       float: left;
       width: 14.2%;
-      padding: 10px;
       justify-content: center;
-      max-width: 150px;
 
-      i {
-        font-size: 2em;
+      img {
+        width: 40%;
         margin: auto;
         height: auto;
       }
@@ -79,6 +79,7 @@
 
 @media only screen and (max-width: 1000px) {
   .about_container {
+    height: auto;
     .about_dev_logos {
       .about_column {
         width: 20%;
@@ -100,6 +101,10 @@
 
 @media only screen and (max-width: 500px) {
   .about_container {
+    .about_main {
+      margin-bottom: 20px;
+    }
+
     .about_dev_logos {
       .about_column {
         width: 30%;
@@ -112,7 +117,11 @@
   .about_container {
     .about_dev_logos {
       .about_column {
-        width: 40%;
+        width: 50%;
+        img {
+          width: 30%;
+          height: auto;
+        }
       }
     }
   }
@@ -123,15 +132,11 @@
     .about_dev_logos {
       .about_column {
         width: 100%;
-      }
 
-      .about_overlay {
-        justify-content: left;
-      }
-
-      img {
-        width: 60%;
-        height: 70px;
+        img {
+          width: 20%;
+          height: auto;
+        }
       }
     }
   }

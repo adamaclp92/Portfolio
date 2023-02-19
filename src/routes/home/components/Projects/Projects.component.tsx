@@ -5,8 +5,6 @@ import ProjectDiv from "./UI/ProjectDiv.component";
 import projectsObjArray from "../../config/projects";
 
 const Navigation = (language: LanguageModel) => {
-
-
   const projectsList = projectsObjArray.map((project) => {
     return (
       <ProjectDiv
@@ -23,7 +21,7 @@ const Navigation = (language: LanguageModel) => {
   });
 
   return (
-    <Container id="projects" className="projects_container">
+    <div id="projects" className="projects_container">
       {language.code === "en" ? (
         <h1>My Recently Projets</h1>
       ) : (
@@ -36,7 +34,7 @@ const Navigation = (language: LanguageModel) => {
       )}
       <hr />
       <div className="projects_project_list">{projectsList}</div>
-    </Container>
+    </div>
   );
 };
 

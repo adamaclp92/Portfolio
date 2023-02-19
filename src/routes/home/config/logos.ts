@@ -7,13 +7,13 @@ import SqlLogo from "../assets/sql.png";
 import TypeScriptLogo from "../assets/typescript.png";
 
 const logos = [
-    { text: "HTML", logo: "html5 icon" },
-    { text: "CSS", logo: "css3 icon" },
-    { text: "JAVASCRIPT", logo: "fa-brands fa-js"},
-    { text: "REACT", logo: "react icon" },
-    { text: "TYPESCRIPT", logo: "typescript icon" },
-    { text: "SQL", logo: "sql icon" },
-    { text: "JAVA", logo: "java icon" },
-  ]
-  
-  export default logos;
+  { text: "HTML", logo: HtmlLogo },
+  { text: "CSS", logo: CssLogo },
+  { text: "JAVASCRIPT", logo: JavascriptLogo },
+  { text: "REACT", logo: ReactLogo },
+  { text: "TYPESCRIPT", logo: TypeScriptLogo },
+  { text: "SQL", logo: SqlLogo },
+  { text: "JAVA", logo: JavaLogo },
+];
+
+export default logos;

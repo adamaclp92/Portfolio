@@ -2,11 +2,10 @@ import LanguageModel from "../../models/languageModel";
 import IntroImage from "../../assets/photo.jpeg";
 
 import "./Introduction.style.scss";
-import { Container } from "semantic-ui-react";
 
 const Introduction = (language: LanguageModel) => {
   return (
-    <Container className="intro_container">
+    <div className="intro_container">
       <img className="intro_img" src={IntroImage} alt="intro_image" />
       {language.code === "en" ? (
         <div className="intro_text_div">
@@ -14,7 +13,7 @@ const Introduction = (language: LanguageModel) => {
           <p className="intro_description">
             I'm a frontend Javascript Developer. This is my portfolio website
             where I would like to introduce myself and my practicing projects.
-          </p>{" "}
+          </p>
         </div>
       ) : (
         <div className="intro_text_div">
@@ -26,7 +25,7 @@ const Introduction = (language: LanguageModel) => {
           </p>
         </div>
       )}
-    </Container>
+    </div>
   );
 };
 

@@ -11,14 +11,15 @@
 
   .projectDiv_image {
     width: 50%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    border-radius: 30px;
+    padding: 10px;
   }
 
   .projectDiv_project_description {
     margin: auto;
 
     .projectDiv_title {
-      color: rgba(70, 69, 69, 0.493);
+      color: white;
     }
 
     .button1 {
