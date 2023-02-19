@@ -7,7 +7,7 @@ import { Container } from "semantic-ui-react";
 const Introduction = (language: LanguageModel) => {
   return (
     <Container className="intro_container">
-      <img className="intro_img" src={IntroImage} alt="intro_image"/>
+      <img className="intro_img" src={IntroImage} alt="intro_image" />
       {language.code === "en" ? (
         <div className="intro_text_div">
           <h1 className="intro_name">I'm Adam Rago</h1>

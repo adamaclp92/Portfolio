@@ -4,7 +4,8 @@
   border: none;
   padding: 100px;
   overflow: hidden;
-  background-color: white;
+  background-color: rgba(0, 131, 192, 0.2);
+  color: white;
 
   max-width: 1000px;
   margin-left: auto;
@@ -21,7 +22,8 @@
     border-radius: 20%;
     object-fit: cover;
     float: left;
-  }
+
+}
 
   .intro_text_div {
     width: 40%;

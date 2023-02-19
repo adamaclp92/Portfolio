@@ -11,6 +11,7 @@ import Message from "./components/Message/Message.component";
 import Navigation from "./components/Projects/Projects.component";
 import Contacts from "./components/Contacts/Contacts.components";
 
+
 const languages = [
   { code: "en", name: "English", asset: en },
   { code: "hun", name: "Hungarian", asset: hun },
@@ -33,14 +34,14 @@ const Home = () => {
           className="home_alternativeLanguage"
           onClick={() => changeLanguage(language)}
         >
-          <img src={language.asset} alt="language_asset"/>
+          <img src={language.asset} alt="language_asset" />
         </li>
       );
     }
   });
 
   return (
-    <React.Fragment>
+    <div className="main">
       <div className="home_lang">
         <div className="home_imageContainer">
           <img src={currentLanguage.asset} alt="currentLanguage_asset" />
@@ -49,12 +50,18 @@ const Home = () => {
       </div>
 
       <Navbar {...currentLanguage} />
+
       <Introduction {...currentLanguage} />
+
       <About {...currentLanguage} />
+
       <Navigation {...currentLanguage} />
+
       <Message {...currentLanguage} />
+
       <Contacts {...currentLanguage} />
-    </React.Fragment>
+
+    </div>
   );
 };
 

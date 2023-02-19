@@ -1,12 +1,12 @@
 .about_container {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   box-sizing: border-box;
   padding: 32px;
   margin: 20px;
   justify-content: center;
   border: none;
-  background-color: white;
+  background-color: rgba(7, 13, 97, 0.3);
+  color: #11aaaa;
 
   .about_main {
     width: 100%;
@@ -64,8 +64,8 @@
       justify-content: center;
       max-width: 150px;
 
-      img {
-        width: 80%;
+      i {
+        font-size: 2em;
         margin: auto;
         height: auto;
       }
