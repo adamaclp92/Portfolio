@@ -11,7 +11,6 @@ import Message from "./components/Message/Message.component";
 import Navigation from "./components/Projects/Projects.component";
 import Contacts from "./components/Contacts/Contacts.components";
 
-
 const languages = [
   { code: "en", name: "English", asset: en },
   { code: "hun", name: "Hungarian", asset: hun },
@@ -60,7 +59,6 @@ const Home = () => {
       <Message {...currentLanguage} />
 
       <Contacts {...currentLanguage} />
-
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import { Container } from "semantic-ui-react";
 import "./Projects.style.scss";
 import LanguageModel from "../../models/languageModel";
 import ProjectDiv from "./UI/ProjectDiv.component";

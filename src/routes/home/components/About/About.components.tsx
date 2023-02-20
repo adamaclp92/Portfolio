@@ -3,8 +3,13 @@ import "./About.style.scss";
 import skills from "../../config/skills";
 import logos from "../../config/logos";
 
+interface logo {
+  text: string;
+  logo: string;
+}
+
 const About = (language: LanguageModel) => {
-  const logosMapping = logos.map((logo: any) => {
+  const logosMapping = logos.map((logo: logo) => {
     return (
       <div key={logo.text} className="about_column">
         <div className="about_overlay_img">

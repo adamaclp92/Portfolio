@@ -6,7 +6,7 @@
   border: none;
   background-color: white;
   color: black;
-  height: 100vh;
+
 
   .about_main {
     width: 100%;
@@ -16,7 +16,7 @@
 
   .about_others {
     overflow: hidden;
-    max-width: 1200px;
+    width: 100%;
 
     p {
       margin-bottom: 0;
@@ -40,6 +40,7 @@
   }
 
   .about_other_dev_skills {
+  
     font-size: 20px;
     margin-bottom: 20px;
   }
