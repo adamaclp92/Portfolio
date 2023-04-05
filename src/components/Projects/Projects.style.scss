@@ -2,13 +2,16 @@
   text-align: center;
   h1 {
     color: var(--color-primary);
+    margin: 10px;
     font-weight: bold;
     margin-top: 16rem;
     margin-bottom: 4rem;
+
   }
 
   p {
     color: var(--color-light);
+    margin-top: 10px;
     margin-bottom: 4rem;
   }
 
@@ -43,6 +46,16 @@
 
     .projects_project_list {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .projects_container {
+    
+    .projects_project_list {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

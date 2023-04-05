@@ -39,8 +39,9 @@
 
 @media screen and (max-width: 950px) {
   .projectDiv_project {
-    padding: 1rem;
-    width: 280px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    width: 350px;
     .projectDiv_image {
       height: 200px;
     }
@@ -54,7 +55,7 @@
     }
 
     .btn-primary {
-      width: 100px;
+      width: 120px;
     }
   }
 }

@@ -106,13 +106,24 @@
         .btn-primary {
           width: 100%;
         }
+
+        input,
+        textarea {
+          width: 300px;
+        }
       }
 
       .contact_footer_container {
         margin: auto;
         margin-bottom: 8rem;
         grid-area: b;
+        font-size: small;
       }
+    }
+
+    .contact_last_item{
+      padding: 5px;
+      margin-bottom: 5px;
     }
   }
 }
