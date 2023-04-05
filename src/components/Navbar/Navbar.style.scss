@@ -1,0 +1,50 @@
+.navbar_container {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+
+  a {
+    background: transparent;
+    padding: 0.8rem;
+    margin: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--color-light);
+    font-size: 2rem;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar_active {
+    background: var(--color-bg);
+    color: var(--color-white);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar_container {
+    padding: 0.2rem 0.5rem;
+    a {
+      padding: 0.4rem;
+      font-size: 1.5rem;
+    }
+  }
+}

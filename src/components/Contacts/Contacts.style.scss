@@ -1,0 +1,118 @@
+.message_container {
+  margin-top: 8rem;
+  .contact_title {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: center;
+  }
+  .message_title {
+    color: var(--color-white);
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .message_grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: "a b c d d d d f";
+
+    .message_form {
+      grid-area: d;
+      input,
+      textarea {
+        width: 500px;
+        border: 2px solid var(--color-primary-variant);
+        border-radius: 5px;
+        background-color: transparent;
+        padding: 25px;
+        margin-bottom: 2rem;
+        color: var(--color-white);
+        font-weight: bold;
+      }
+
+      textarea {
+        height: 200px;
+      }
+    }
+
+    .contact_footer_container {
+      grid-area: b;
+      margin-bottom: 10rem;
+      .contact_row {
+        font-weight: bold;
+        width: 300px;
+        height: 180px;
+        background-color: var(--color-bg-variant);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        li {
+          color: white;
+          margin-top: 1rem;
+        }
+
+        &:hover {
+          background: transparent;
+          border: 2px solid var(--color-primary-variant);
+
+          li {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  .contact_last_item {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .message_container {
+    .message_grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "a b c d";
+      gap: 20px;
+
+      .message_form {
+        grid-area: d;
+      }
+
+      .contact_footer_container {
+        grid-area: a;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .message_container {
+    .message_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "a a"
+        "b b";
+
+      .message_form {
+        margin: auto;
+        margin-bottom: 2rem;
+        grid-area: a;
+        .btn-primary {
+          width: 100%;
+        }
+      }
+
+      .contact_footer_container {
+        margin: auto;
+        margin-bottom: 8rem;
+        grid-area: b;
+      }
+    }
+  }
+}
