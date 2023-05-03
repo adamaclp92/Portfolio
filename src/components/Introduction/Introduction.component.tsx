@@ -1,5 +1,5 @@
 import LanguageModel from "../../models/languageModel";
-import IntroImage from "../../assets/intro.png";
+
 
 import "./Introduction.style.scss";
 import React from "react";
@@ -21,9 +21,7 @@ const Introduction = (language: LanguageModel) => {
 
             <Cta {...language} />
 
-            <div className="intro_image">
-              <img src={IntroImage} alt="intro_image" />
-            </div>
+
           </React.Fragment>
         ) : (
           <React.Fragment>
@@ -37,9 +35,7 @@ const Introduction = (language: LanguageModel) => {
 
             <Cta {...language} />
 
-            <div className="intro_image">
-              <img src={IntroImage} alt="intro_image" />
-            </div>
+
           </React.Fragment>
         )}
       </div>
