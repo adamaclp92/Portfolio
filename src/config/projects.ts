@@ -1,31 +1,22 @@
-import circleimage from "../assets/circle-drawer.png";
-import colorchooser from "../assets/color-chooser.png";
+
 import synonymapi from "../assets/synonym-api.png";
 import tenzies from "../assets/tenzies.png";
 import foodorder from "../assets/food-order.png";
 import admin from "../assets/admin.png";
 import portfolio from "../assets/portfolio.png";
+import todolist from "../assets/todolist.png"
 
 const projectsObjArray = [
-  {
-    id: 0,
-    englishTitle: "CircleDrawer App",
-    hungarianTitle: "Kör rajzolós app",
-    stack: "HTML, SCSS, React, Typescript.",
-    href: "https://oldportfolio-adamaclp92.netlify.app/circledrawer",
-    src: circleimage,
-    github:
-      "https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/circle-drawer",
-  },
+
   {
     id: 1,
-    englishTitle: "Color Finder App",
-    hungarianTitle: "Szín kitaláló app",
-    stack: "HTML, SCSS, React, Typescript.",
-    href: "https://oldportfolio-adamaclp92.netlify.app/colorchooser",
-    src: colorchooser,
+    englishTitle: "Todo list",
+    hungarianTitle: "Feladatlista",
+    stack: "HTML, CSS, Tailwind, React.",
+    href: "https://adamaclp92-todo.netlify.app",
+    src: todolist,
     github:
-      "https://github.com/adamaclp92/ReactLearning/tree/main/practice-projects2/src/projects/color-chooser",
+      "https://github.com/adamaclp92/Todolist",
   },
   {
     id: 2,
@@ -75,6 +66,7 @@ const projectsObjArray = [
     src: portfolio,
     github: "https://github.com/adamaclp92/OldPortfolio",
   },
+  
 ];
 
 export default projectsObjArray;
